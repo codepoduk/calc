@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import RemoveComponent from './RemoveComponent.js';
 
 const GenericBlock = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background-color: coral;
   padding: 20px;
   border-radius: 25px;
-  position: absolute;
-  top: 40%;
-  right: 40%;
+  position: relative;
+  font-size: 3em;
 `;
 
 
@@ -19,8 +18,7 @@ class StyledBlock extends Component {
     return (
       <div>
         <GenericBlock>
-          This is a block!
-          <RemoveComponent />
+          +1
         </ GenericBlock>
       </div>
     )

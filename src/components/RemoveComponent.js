@@ -5,13 +5,13 @@ const CrossBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   background: red;
   color: white;
   border-radius: 50%;
   position: absolute; 
-  top: 0;
+  top: 5%;
   left: 83%;
   opacity: .3;
   &:hover {
