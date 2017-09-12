@@ -18,6 +18,14 @@ class CalcSpace extends Component {
     this.state = {
       input: null,
       output: null,
+      block: [
+        { name: '*10',
+          operation: function(input){ return input *10 }},
+        { name: '-5',
+          operation: function(input){ return input -5 }},
+        { name: '/2',
+          operation: function(input){ return input /2 }}
+      ],
     }
   }
 
@@ -25,7 +33,7 @@ class CalcSpace extends Component {
     console.log(this.state.input);
     this.setState(
       {input: userInput,
-        output: userInput+1}
+        output: this.state.block[0].operation(userInput)}
     )
   }
 
@@ -34,7 +42,7 @@ class CalcSpace extends Component {
     return(
       <Area>
         <InputField submit={this.getInput.bind(this)} />
-        <StyledBlock />
+        <StyledBlock name={this.state.block[0].name} />
         <OutputField content={this.state.output} />
       </ Area>  
     )

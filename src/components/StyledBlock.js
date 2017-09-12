@@ -18,7 +18,7 @@ class StyledBlock extends Component {
     return (
       <div>
         <GenericBlock>
-          +1
+          {this.props.name}
         </ GenericBlock>
       </div>
     )
