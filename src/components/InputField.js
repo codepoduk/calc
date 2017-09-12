@@ -12,7 +12,7 @@ export default class InputField extends Component {
   constructor() {
     super();
     this.state = {
-      fieldContent: null,
+      fieldContent: '',
     }
   }
   
