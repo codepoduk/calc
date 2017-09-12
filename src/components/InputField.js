@@ -2,24 +2,28 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const FieldStyle = styled.input`
-    
+  border-radius: 15px;
+  border: none;
+  font-size: 2em;
+  padding: 10px;
 `;
 
-class InputField extends Component {
+export default class InputField extends Component {
   constructor() {
     super();
     this.state = {
-      fieldContent: {}, // why is this an object?
+      fieldContent: null,
     }
   }
   
   setValue(property, event) {
     var value = event.target.value;
-    this.setState(({fieldContent}) => {
-      fieldContent[property] = value;
-      return { fieldContent: fieldContent};
-    });
-    console.log(this.state.fieldContent.fieldContent);
+    this.setState(
+      ({ fieldContent }) => {
+        fieldContent = value;
+        return { fieldContent };
+      });
+    console.log(this.state.fieldContent);
   }
 
   // keySubmit(event) { /* trigger add button via enter key */
@@ -31,14 +35,13 @@ class InputField extends Component {
 
   render() {
     return(
-      <div class="form-group">
-        <input type="text" 
+      <div className="form-group">
+        <FieldStyle type="text" 
           id="message-field"
           onChange={this.setValue.bind(this, "fieldContent")}
-          class="form-control" />
+          className="form-control" />
       </div>
     )
   }
 }
 
-export default InputField;
