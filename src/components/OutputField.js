@@ -6,7 +6,7 @@ const StyledFoo = styled.bar`
 `;
 
 class Foo extends Component {
-  render() {
+  render(props) {
     return(
 
     )

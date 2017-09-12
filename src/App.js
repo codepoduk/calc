@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import StyledBlock from './components/StyledBlock.js';
+import CalcSpace from './components/CalcSpace.js';
 
 class App extends Component {
   render() {
@@ -11,7 +11,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>wakeful-reaction (calc)</h2>
         </div>
-        <StyledBlock />
+
+        <CalcSpace />
       </div>
     );
   }
