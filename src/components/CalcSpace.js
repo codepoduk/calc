@@ -13,23 +13,22 @@ class CalcSpace extends Component {
   constructor() {
     super();
     this.state = {
-      input: '',
-      output: '',
+      input: 'placeholder',
     }
   }
 
-  // getInput() {
-  //   this.setState(
-  //     ({ input }) => {
-  //       input = value;
-  //       return { fieldContent };
-  // }
+  getInput(userInput) {
+    console.log(this.state.input);
+    this.setState(
+      {input: userInput}
+    )
+  }
 
 
   render() {
     return(
       <Area>
-        <InputField />
+        <InputField submit={this.getInput.bind(this)} />
         <StyledBlock />
       </ Area>  
     )

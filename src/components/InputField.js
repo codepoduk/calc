@@ -15,7 +15,7 @@ export default class InputField extends Component {
       fieldContent: '',
     }
   }
-  
+
   setValue(property, event) {
     var value = event.target.value;
     this.setState(
@@ -23,12 +23,12 @@ export default class InputField extends Component {
         fieldContent = value;
         return { fieldContent };
       });
-    console.log(this.state.fieldContent);
   }
 
   keySubmit(event) { /* trigger add button via enter key */
     if (event.keyCode == 13) {
-    document.getElementById('add').click()
+      this.props.submit(this.state.fieldContent);
+      console.log(this.state.fieldContent);
     };
   }
 
@@ -36,11 +36,11 @@ export default class InputField extends Component {
   render() {
     return(
       <div className="form-group">
-        <FieldStyle type="text" 
+        <FieldStyle type="text"
           id="message-field"
           onChange={this.setValue.bind(this, "fieldContent")}
+          onKeyDown={this.keySubmit.bind(this)}
           className="form-control" />
-          <button id="add" class="btn btn-success" type="button" onClick={this.onSave.bind(this)}>Add</button>
       </div>
     )
   }
