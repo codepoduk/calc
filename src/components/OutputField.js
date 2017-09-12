@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const StyledFoo = styled.bar`
+const Display = styled.div`
 
 `;
 
-class Foo extends Component {
+export default class OutputField extends Component {
   render(props) {
     return(
-
+    
     )
   }
 }
 
-export default Foo;

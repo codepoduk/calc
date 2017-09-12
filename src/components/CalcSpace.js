@@ -10,6 +10,22 @@ const Area = styled.div`
 `;
 
 class CalcSpace extends Component {
+  constructor() {
+    super();
+    this.state = {
+      input: '',
+      output: '',
+    }
+  }
+
+  // getInput() {
+  //   this.setState(
+  //     ({ input }) => {
+  //       input = value;
+  //       return { fieldContent };
+  // }
+
+
   render() {
     return(
       <Area>

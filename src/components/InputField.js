@@ -26,11 +26,11 @@ export default class InputField extends Component {
     console.log(this.state.fieldContent);
   }
 
-  // keySubmit(event) { /* trigger add button via enter key */
-  //   if (event.keyCode == 13) {
-  //   document.getElementById('add').click()
-  //   };
-  // }
+  keySubmit(event) { /* trigger add button via enter key */
+    if (event.keyCode == 13) {
+    document.getElementById('add').click()
+    };
+  }
 
 
   render() {
@@ -40,6 +40,7 @@ export default class InputField extends Component {
           id="message-field"
           onChange={this.setValue.bind(this, "fieldContent")}
           className="form-control" />
+          <button id="add" class="btn btn-success" type="button" onClick={this.onSave.bind(this)}>Add</button>
       </div>
     )
   }

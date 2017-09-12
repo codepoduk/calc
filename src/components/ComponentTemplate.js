@@ -5,7 +5,7 @@ const StyledFoo = styled.bar`
 
 `;
 
-class Foo extends Component {
+export default class Foo extends Component {
   render() {
     return(
 
@@ -13,4 +13,3 @@ class Foo extends Component {
   }
 }
 
-export default Foo;
