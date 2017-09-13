@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const CrossBox = styled.div`
+  font-size: .3em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +25,7 @@ const CrossBox = styled.div`
 class RemoveComponent extends Component {
   render() {
     return(
-      <CrossBox><h4>X</h4></ CrossBox>
+      <CrossBox onClick={function(){console.log(this)}}> X </CrossBox>
     )
   }
 }

@@ -12,13 +12,13 @@ const GenericBlock = styled.div`
   font-size: 3em;
 `;
 
-
 class StyledBlock extends Component {
   render(){
     return (
       <div>
         <GenericBlock>
           {this.props.name}
+          <RemoveComponent />
         </ GenericBlock>
       </div>
     )
