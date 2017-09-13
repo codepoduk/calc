@@ -42,7 +42,9 @@ class CalcSpace extends Component {
     return(
       <Area>
         <InputField submit={this.getInput.bind(this)} />
-        <StyledBlock name={this.state.block[0].name} />
+        {this.state.block.map((block) =>
+          <StyledBlock name={block.name} key={block.name} />)
+        }
         <OutputField content={this.state.output} />
       </ Area>  
     )
